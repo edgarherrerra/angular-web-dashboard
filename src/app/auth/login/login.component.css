@@ -1,0 +1,90 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  padding: 50px 20px 0 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.is-invalid {
+  border-color: red;
+}
+
+.is-invalid::placeholder {
+  color: red;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 75%;
+  width: 90%;
+  border-radius: 5%;
+  border: 1px solid black;
+  padding: 0 40px;
+  position: relative;
+}
+
+.arrow-button {
+  border: 1px solid black;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  top: calc(100% - 50px);
+}
+
+.arrow-button button {
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+} 
+
+.arrow-button button:focus {
+  outline: none;
+}
+
+.arrow-button button svg {
+  fill: #2a78e4;
+  width: 60%;
+  height: 100%;
+} 
+
+.group {
+  position: relative;
+  margin-bottom: 45px;
+  width: 100%;
+}
+
+input {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2a78e4;
+}
+
+input:focus::placeholder {
+  color: #2a78e4;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-top: 0;
+    align-items: center;
+  }
+  .container form {
+    border-radius: 0;
+    width: 350px;
+    height: 400px;
+  }
+ }

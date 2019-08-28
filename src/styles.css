@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overscroll-behavior: none;
+  overflow-x: hidden;
+}

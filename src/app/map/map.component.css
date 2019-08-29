@@ -1,0 +1,66 @@
+.map-container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.dashboard-link {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-link a {
+  text-decoration: none;
+  color: #2a78e4;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+agm-map {
+  position: relative;
+  height: 80%;
+}
+
+.map-types {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+}
+
+.map-types button {
+  font-size: 18px;
+  color: #2a78e4;
+  background: transparent;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+}
+
+.current-location {
+  position: absolute;
+  right: 3%;
+  top: calc(90% - 20px);
+  width: 40px;
+  height: 40px;
+  background: blue;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.current-location:focus {
+  outline: 0;
+}
+
+.current-location svg {
+  width: 100%;
+  height: 100%;
+  fill: white;
+}
+
+@media (min-width: 1024px) {
+  .current-location {
+    top: calc(95% - 20px);
+  }
+}

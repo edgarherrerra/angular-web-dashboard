@@ -10,4 +10,5 @@ body {
   margin: 0;
   overscroll-behavior: none;
   overflow-x: hidden;
+  font-family: sans-serif;
 }

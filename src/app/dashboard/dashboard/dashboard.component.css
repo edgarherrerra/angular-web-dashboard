@@ -1,0 +1,82 @@
+h3 {
+  margin-top: 0;
+}
+.dashboard-container {
+
+}
+
+.sections-container {
+
+}
+
+.map-link {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-link a {
+  text-decoration: none;
+  color: #2a78e4;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.dashboard-todo,
+.dashboard-cards,
+.dashboard-weather {
+  height: 30vh;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 12px;
+}
+
+.dashboard-todo {
+  background-color: red;
+}
+
+.dashboard-cards {
+  background-color: green;
+}
+
+.dashboard-sales {
+  margin: 20px;
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.chart-container {
+  height: 20vh;
+}
+
+.dashboard-sales canvas {
+  object-fit: contain;
+}
+
+.dashboard-weather {
+  background-color: blue;
+}
+
+@media (min-width: 768px) {
+  .dashboard-container {
+
+  }
+
+  .sections-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dashboard-todo,
+  .dashboard-cards,
+  .dashboard-sales,
+  .dashboard-weather {
+    height: calc(40vh - 40px);
+    width: 40%;
+  }
+}

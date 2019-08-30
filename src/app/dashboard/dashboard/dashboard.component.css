@@ -1,19 +1,12 @@
 h3 {
   margin-top: 0;
 }
-.dashboard-container {
-
-}
-
-.sections-container {
-
-}
 
 .map-link {
   height: 10vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .map-link a {
@@ -27,18 +20,77 @@ h3 {
 .dashboard-cards,
 .dashboard-weather {
   height: 30vh;
-  margin: 20px;
+  margin: 50px 20px;
   padding: 10px;
   border: 1px solid black;
   border-radius: 12px;
 }
 
 .dashboard-todo {
-  background-color: red;
+  position: relative;
+}
+
+.todo-list {
+  overflow: scroll;
+  height: 80%;
+}
+
+.todos-container {
+  display: flex;
+  margin: 20px 0;
+}
+
+.todo-data-container {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.todo-title {
+  width: 100%;
+  padding: 0 10px;
+  background: red;
+  border-radius: 12px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.edit-delete-todo {
+  display: flex;
+}
+
+.todo-title a {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.todo-title a svg {
+  height: 15px;
+  width: 15px;
+  fill: white;
+}
+
+.todo-title b {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: white;
+}
+
+.todo-title span {
+  cursor: pointer;
+}
+
+.todo-title span svg {
+  width: 10px;
+  height: 10px;
+  fill: white;
 }
 
 .dashboard-cards {
-  background-color: green;
+  position: relative;
 }
 
 .dashboard-sales {
@@ -57,14 +109,35 @@ h3 {
 }
 
 .dashboard-weather {
-  background-color: blue;
+}
+
+.new-todo,
+.new-card {
+  position: absolute;
+  right: -10px;
+  bottom: -25px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+}
+
+.new-todo {
+  background: red;
+}
+
+.new-card {
+  background: black;
+}
+
+.new-todo svg,
+.new-card svg {
+  width: 100%;
+  height: 100%;
+  fill: white;
 }
 
 @media (min-width: 768px) {
-  .dashboard-container {
-
-  }
-
   .sections-container {
     display: flex;
     flex-wrap: wrap;
@@ -74,9 +147,26 @@ h3 {
 
   .dashboard-todo,
   .dashboard-cards,
+  .dashboard-weather {
+    margin: 20px;
+  }
+
+  .dashboard-todo,
+  .dashboard-cards,
   .dashboard-sales,
   .dashboard-weather {
     height: calc(40vh - 40px);
     width: 40%;
+  }
+
+  .new-todo,
+  .new-card {
+    position: absolute;
+    right: -25px;
+    bottom: -25px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
   }
 }

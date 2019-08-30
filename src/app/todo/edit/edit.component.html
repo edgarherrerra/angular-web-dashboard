@@ -1,0 +1,23 @@
+<div class="edit-todo-container">
+  <h2>Editar tarea</h2>
+  <form *ngIf="todo" #formTodo="ngForm" class="login-container" (ngSubmit)="formTodo.form.valid && editTodo(formTodo)"
+    novalidate>
+    <div class="group">
+      <input value={{todo.todo.title}} [(ngModel)]="todo.todo.title" #title="ngModel" type="text" name="title"
+        placeholder="Mi nueva tarea" required />
+    </div>
+    <div class="group">
+      <input [(ngModel)]="todo.todo.date" #date="ngModel" value={{todo.todo.date}} type="text" name="date"
+        placeholder="12/12" autocomplete="current-date" [ngClass]="{ 'is-invalid': formTodo.submitted && date.invalid }"
+        required />
+    </div>
+    <div class="group">
+      <input [(ngModel)]="todo.todo.hour" #hour="ngModel" value={{todo.todo.hour}} type="hour" name="hour"
+        placeholder="12:30 PM" autocomplete="current-hour"
+        [ngClass]="{ 'is-invalid': formTodo.submitted && hour.invalid }" required />
+    </div>
+    <div class="arrow-button">
+      <button type="submit">Editar</button>
+    </div>
+  </form>
+</div>

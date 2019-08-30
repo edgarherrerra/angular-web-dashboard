@@ -7,7 +7,8 @@ const routes: Routes = [
   { path: '', redirectTo: '/auth/signup', pathMatch: 'full' },
   { path: 'auth', loadChildren: './auth/auth.module#AuthModule' },
   { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
-  { path: 'map', component: MapComponent }
+  { path: 'map', component: MapComponent },
+  { path: 'todo', loadChildren: './todo/todo.module#TodoModule' }
 ];
 
 @NgModule({

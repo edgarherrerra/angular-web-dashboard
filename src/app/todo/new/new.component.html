@@ -1,0 +1,23 @@
+<div class="new-todo-container">
+  <h2>Nueva tarea</h2>
+  <form #formTodo="ngForm" class="login-container" (ngSubmit)="formTodo.form.valid && newTodo(formTodo)"
+    novalidate>
+    <div class="group">
+      <input [(ngModel)]="model.title" #title="ngModel" type="text" name="title" placeholder="Mi nueva tarea"
+        autocomplete="title" [ngClass]="{ 'is-invalid': formTodo.submitted && title.invalid }" required />
+    </div>
+    <div class="group">
+      <input [(ngModel)]="model.date" #date="ngModel" type="text" name="date" placeholder="12/12"
+        autocomplete="current-date" [ngClass]="{ 'is-invalid': formTodo.submitted && date.invalid }"
+        required />
+    </div>
+    <div class="group">
+      <input [(ngModel)]="model.hour" #hour="ngModel" type="hour" name="hour" placeholder="12:30 PM"
+        autocomplete="current-hour" [ngClass]="{ 'is-invalid': formTodo.submitted && hour.invalid }"
+        required />
+    </div>
+    <div class="arrow-button">
+      <button type="submit">New</button>
+    </div>
+  </form>
+</div>

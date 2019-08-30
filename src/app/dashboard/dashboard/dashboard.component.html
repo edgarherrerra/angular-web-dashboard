@@ -120,6 +120,15 @@
     </div>
     <div class="dashboard-weather">
       <h3>Clima</h3>
+      <div *ngIf="weather" class="weather">
+        <p>{{weather.city.name}}</p>
+        <div class="weather-description">
+          <div *ngFor="let weather of weather.list">
+            <img src="http://openweathermap.org/img/w/{{weather.weather[0].icon}}.png" alt="image" />
+            <p>{{weather.weather[0].description}}</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

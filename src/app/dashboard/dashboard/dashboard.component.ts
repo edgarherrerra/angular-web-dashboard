@@ -11,6 +11,7 @@ import { DashboardService } from '../../services/dashboard.service';
 export class DashboardComponent implements OnInit {
   PieChart = []
   user;
+  weather;
   constructor(private dashboardService: DashboardService, private router: Router) {
 
 
@@ -26,7 +27,10 @@ export class DashboardComponent implements OnInit {
     // Get data from Weather API
     this.dashboardService.getWeather()
       .subscribe(
-        res => console.log(res),
+        res => {
+          this.weather = res
+          console.log(res)
+        },
         err => console.log(err)
       )
 
@@ -34,7 +38,6 @@ export class DashboardComponent implements OnInit {
     this.dashboardService.getUser().subscribe(
       res => {
         this.user = res
-        console.log(res)
       },
       err => console.log(err)
     )
@@ -84,6 +87,7 @@ export class DashboardComponent implements OnInit {
     )
   }
 
+  // Delete card
   deleteCard(id, deletedElement) {
     this.dashboardService.deleteCard(id).subscribe(
       res => {

@@ -137,6 +137,58 @@ h3 {
   fill: white;
 }
 
+
+.card-list {
+  overflow: scroll;
+  height: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  background: red;
+  height: 15vh;
+  width: 20vw;
+  width: 50vw;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  justify-content: space-around;
+  padding: 10px;
+  margin-right: 20px;
+  position: relative;
+}
+
+.card div:nth-child(2) {
+  text-align: center;
+}
+
+.card div:nth-child(2) small {
+  letter-spacing: 5px;
+}
+
+.card div:nth-child(3) {
+  text-align: right;
+}
+
+.card-edit-delete {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+.card-edit-delete a {
+  padding: 0 10px;
+}
+
+.card-edit-delete svg {
+  fill: white;
+  width: 15px;
+  height: 15px;
+}
+
 @media (min-width: 768px) {
   .sections-container {
     display: flex;
@@ -168,5 +220,10 @@ h3 {
     width: 50px;
     height: 50px;
     padding: 10px;
+  }
+
+  .card { 
+    height: 20vh;
+    width: 20vw;
   }
 }

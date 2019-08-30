@@ -8,7 +8,8 @@ const routes: Routes = [
   { path: 'auth', loadChildren: './auth/auth.module#AuthModule' },
   { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
   { path: 'map', component: MapComponent },
-  { path: 'todo', loadChildren: './todo/todo.module#TodoModule' }
+  { path: 'todo', loadChildren: './todo/todo.module#TodoModule' },
+  { path: 'card', loadChildren: './card/card.module#CardModule' },
 ];
 
 @NgModule({

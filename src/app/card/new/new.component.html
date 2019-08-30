@@ -1,1 +1,20 @@
-<p>new works!</p>
+<div class="new-card-container">
+  <h2>Nueva Tarjeta</h2>
+  <form #formCard="ngForm" class="login-container" (ngSubmit)="formCard.form.valid && newCard(formCard)" novalidate>
+    <div class="group">
+      <input [(ngModel)]="model.title" #title="ngModel" type="text" name="title" placeholder="American Express"
+        autocomplete="title" [ngClass]="{ 'is-invalid': formCard.submitted && title.invalid }" required />
+    </div>
+    <div class="group">
+      <input [(ngModel)]="model.number" #number="ngModel" type="number" name="number" placeholder="5524 5343 2344 1323"
+        autocomplete="current-number" [ngClass]="{ 'is-invalid': formCard.submitted && number.invalid }" required />
+    </div>
+    <div class="group">
+      <input [(ngModel)]="model.date" #date="ngModel" type="text" name="date" placeholder="12/12"
+        autocomplete="current-date" [ngClass]="{ 'is-invalid': formCard.submitted && date.invalid }" required />
+    </div>
+    <div class="arrow-button">
+      <button type="submit">New</button>
+    </div>
+  </form>
+</div>

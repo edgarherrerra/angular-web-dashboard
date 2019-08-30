@@ -36,4 +36,10 @@ export class DashboardService {
       withCredentials: true
     })
   }
+
+  deleteCard(id) {
+    return this.httpClient.delete(`${this.SERVER}/card/${id}`, {
+      withCredentials: true
+    })
+  }
 }

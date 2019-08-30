@@ -84,4 +84,18 @@ export class DashboardComponent implements OnInit {
     )
   }
 
+  deleteCard(id, deletedElement) {
+    this.dashboardService.deleteCard(id).subscribe(
+      res => {
+        this.dashboardService.getUser().subscribe(
+          res => {
+            this.user = res
+          },
+          err => console.log(err)
+        )
+      },
+      err => console.log(err)
+    )
+  }
+
 }

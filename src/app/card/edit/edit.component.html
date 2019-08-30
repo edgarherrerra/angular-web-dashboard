@@ -1,1 +1,23 @@
-<p>edit works!</p>
+<div class="edit-card-container">
+  <h2>Editar Tarjeta</h2>
+  <form *ngIf="card" #formCard="ngForm" class="login-container" (ngSubmit)="formCard.form.valid && editCard(formCard)"
+    novalidate>
+    <div class="group">
+      <input value={{card.card.title}} [(ngModel)]="card.card.title" #title="ngModel" type="text" name="title"
+        placeholder="Mi nueva tarea" [ngClass]="{ 'is-invalid': formCard.submitted && title.invalid }" required />
+    </div>
+    <div class="group">
+      <input [(ngModel)]="card.card.number" #number="ngModel" value={{card.card.number}} type="number" name="number"
+        placeholder="12:30 PM" autocomplete="current-number"
+        [ngClass]="{ 'is-invalid': formCard.submitted && number.invalid }" required />
+    </div>
+    <div class="group">
+      <input [(ngModel)]="card.card.date" #date="ngModel" value={{card.card.date}} type="text" name="date"
+        placeholder="12/12" autocomplete="current-date" [ngClass]="{ 'is-invalid': formCard.submitted && date.invalid }"
+        required />
+    </div>
+    <div class="arrow-button">
+      <button type="submit">Editar</button>
+    </div>
+  </form>
+</div>

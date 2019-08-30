@@ -10,19 +10,19 @@ export class CardService {
   SERVER: string = 'http://localhost:3000';
   constructor(private httpClient: HttpClient) { }
 
-  newTodo(card: Card) {
+  newCard(card: Card) {
     return this.httpClient.post(`${this.SERVER}/card/new`, card, {
       withCredentials: true
     })
   }
 
-  getTodo(id) {
+  getCard(id) {
     return this.httpClient.get(`${this.SERVER}/card/${id}`, {
       withCredentials: true
     })
   }
 
-  editTodo(card: Card, id) {
+  editCard(card: Card, id) {
     return this.httpClient.post(`${this.SERVER}/card/update/${id}`, card, {
       withCredentials: true
     })
